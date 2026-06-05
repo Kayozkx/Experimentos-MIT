@@ -17,9 +17,8 @@ ExperimentosMIT/
 ├── MateMosquito/
 │   ├── Blocks_Moskito.png
 │   ├── Mate_o_Mosquito.aia
-│   ├── Tela_Moskito.png
-│   └── moskimgs/
-│
+│   └──  Tela_Moskito.png
+│ 
 ├── MovendoObjetos/
 │   ├── Blocks_FogueteBtn.png
 │   ├── Movendo_Objetos.aia
