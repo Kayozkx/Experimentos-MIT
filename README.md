@@ -138,40 +138,7 @@ Paint/Paint.aia
 
 ---
 
-## 🚀 03 — Movendo Objetos (Foguete com Botões)
-
-Foguete controlado por botões direcionais na tela. O sprite muda de imagem conforme a direção do movimento.
-
-### Tela
-
-Fundo espacial com um foguete no centro e quatro botões de seta (esquerda, cima, baixo, direita) na parte inferior.
-
-![Tela Movendo Objetos](MovendoObjetos/Tela_MovendoObj.png)
-
-### Blocos
-
-- **alterarsprite (velocidade, direcao):** função reutilizável que define a velocidade e o heading (direção em graus) do sprite Foguete
-- **Botão Esquerda:** muda a imagem para `Foguete_Esquerda.png` e chama `alterarsprite` com direção 180°
-- **Botão Direita:** muda a imagem para `Foguete_Direita.png` e chama `alterarsprite` com direção 0°
-- **Botão Cima:** muda a imagem para `Foguete_Cima.png` e chama `alterarsprite` com direção 90°
-- **Botão Baixo:** muda a imagem para `Foguete_Baixo.png` e chama `alterarsprite` com direção 270°
-- **Foguete.Dragged:** permite arrastar o sprite diretamente com o dedo
-
-![Blocos Movendo Objetos](MovendoObjetos/Blocks_FogueteBtn.png)
-
----
-
-### 🛠️ Arquivo do Projeto
-
-```
-MovendoObjetos/Movendo_Objetos.aia
-```
-
-> Projeto criado dia 7 de maio de 2026 de 2026
-
----
-
-## ➕ 04 — Quiz Matemática
+## ➕ 03 — Quiz Matemática
 
 Quiz de operações matemáticas com geração aleatória de contas e sistema de pontuação.
 
@@ -201,6 +168,39 @@ QuizMatematica/Quiz_Matematica.aia
 ```
 
 > Projeto criado dia 04 de maio de 2026
+
+---
+
+## 🚀 04 — Movendo Objetos (Foguete com Botões)
+
+Foguete controlado por botões direcionais na tela. O sprite muda de imagem conforme a direção do movimento.
+
+### Tela
+
+Fundo espacial com um foguete no centro e quatro botões de seta (esquerda, cima, baixo, direita) na parte inferior.
+
+![Tela Movendo Objetos](MovendoObjetos/Tela_MovendoObj.png)
+
+### Blocos
+
+- **alterarsprite (velocidade, direcao):** função reutilizável que define a velocidade e o heading (direção em graus) do sprite Foguete
+- **Botão Esquerda:** muda a imagem para `Foguete_Esquerda.png` e chama `alterarsprite` com direção 180°
+- **Botão Direita:** muda a imagem para `Foguete_Direita.png` e chama `alterarsprite` com direção 0°
+- **Botão Cima:** muda a imagem para `Foguete_Cima.png` e chama `alterarsprite` com direção 90°
+- **Botão Baixo:** muda a imagem para `Foguete_Baixo.png` e chama `alterarsprite` com direção 270°
+- **Foguete.Dragged:** permite arrastar o sprite diretamente com o dedo
+
+![Blocos Movendo Objetos](MovendoObjetos/Blocks_FogueteBtn.png)
+
+---
+
+### 🛠️ Arquivo do Projeto
+
+```
+MovendoObjetos/Movendo_Objetos.aia
+```
+
+> Projeto criado dia 7 de maio de 2026 de 2026
 
 ---
 
