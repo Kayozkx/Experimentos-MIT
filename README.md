@@ -200,7 +200,7 @@ Fundo espacial com um foguete no centro e quatro botões de seta (esquerda, cima
 MovendoObjetos/Movendo_Objetos.aia
 ```
 
-> Projeto criado dia 7 de maio de 2026 de 2026
+> Projeto criado dia 7 de maio de 2026
 
 ---
 
