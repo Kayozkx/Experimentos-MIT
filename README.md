@@ -1,11 +1,40 @@
-# ExperimentosMIT
-Repositório com projetos desenvolvidos no MIT App Inventor para Android. Todos os apps foram criados por mim, do zero, sem uso de IA — com o objetivo de treinar lógica de programação visual com blocos.
+![Banner](assets/banner_principal.png)
 
 # 📱 MIT App Inventor — Experimentos
 
-Repositório com projetos desenvolvidos no **MIT App Inventor** para Android. Todos os apps foram criados por mim, do zero, sem uso de IA — com o objetivo de treinar lógica de programação visual com blocos.
+![MIT App Inventor](https://img.shields.io/badge/Engine-MIT%20App%20Inventor-blue)
+![Plataforma](https://img.shields.io/badge/Plataforma-Android-green)
+![Projetos](https://img.shields.io/badge/Projetos-6-orange)
+![Status](https://img.shields.io/badge/Status-Em%20Andamento-yellow)
 
-> Projeto pessoal desenvolvido para fins de aprendizado e testes.
+Repositório com projetos desenvolvidos no **MIT App Inventor** para Android. Todos os apps foram criados do zero, sem uso de IA — com o objetivo de treinar lógica de programação visual com blocos.
+
+---
+
+## 📋 Índice
+
+- [Sobre o Repositório](#-sobre-o-repositório)
+- [Estrutura do Repositório](#-estrutura-do-repositório)
+- [01 — Player Tauz](#-01--player-tauz)
+- [02 — Paint](#-02--paint)
+- [03 — Quiz Matemática](#-03--quiz-matemática)
+- [04 — Movendo Objetos](#-04--movendo-objetos-foguete-com-botões)
+- [05 — Mate o Mosquito](#-05--mate-o-mosquito)
+- [06 — Foguete com Acelerômetro](#-06--foguete-com-acelerômetro)
+- [Como Replicar](#-como-replicar)
+- [O que Aprendi](#-o-que-aprendi)
+- [Autor](#️-autor)
+
+---
+
+## 📱 Sobre o Repositório
+
+Este repositório reúne os primeiros projetos que desenvolvi no MIT App Inventor, cada um criado para aprender e praticar um conceito diferente de programação em blocos — desde players de música e jogos de reflexo até sensores do celular.
+
+**Ferramenta:** MIT App Inventor
+**Plataforma:** Android
+**Total de projetos:** 6
+**Período:** Março a Maio de 2026
 
 ---
 
@@ -15,39 +44,12 @@ Repositório com projetos desenvolvidos no **MIT App Inventor** para Android. To
 ExperimentosMIT/
 │
 ├── MateMosquito/
-│   ├── Blocks_Moskito.png
-│   ├── Mate_o_Mosquito.aia
-│   └──  Tela_Moskito.png
-│ 
 ├── MovendoObjetos/
-│   ├── Blocks_FogueteBtn.png
-│   ├── Movendo_Objetos.aia
-│   └── Tela_MovendoObj.png
-│
 ├── MovendoObjetos2/
-│   ├── Blocks_FogueteAccel.png
-│   ├── Movendo_Objetos2.aia
-│   └── Tela_Accel.png
-│
 ├── Paint/
-│   ├── Blocks_Paint.png
-│   ├── Paint.aia
-│   └── Tela_Paint.png
-│
 ├── PlayerTauz/
-│   ├── Blocks_MenuTauz.png
-│   ├── Blocks_PlayerTauz.png
-│   ├── Player_Tauz.aia
-│   ├── Tela_MenuTauz.png
-│   └── Tela2_PlayerTauz.png
-│
 ├── QuizMatematica/
-│   ├── Blocks_QuizMat.png
-│   ├── Quiz_Matematica.aia
-│   └── Tela_QuizMat.png
-│
 ├── LICENSE
-│
 └── README.md
 ```
 
@@ -55,7 +57,9 @@ ExperimentosMIT/
 
 ## 🎵 01 — Player Tauz
 
-**Meu primeiro projeto.** Um player de música completo com tema visual inspirado em músicas do estilo House, chamado VibeHouse.
+![Banner Player Tauz](assets/banner_playertauz.png)
+
+**Meu primeiro projeto.** Um player de música completo com tema visual inspirado no estilo House, chamado VibeHouse.
 
 ### Telas
 
@@ -67,7 +71,7 @@ Tela inicial com fundo temático e botão para entrar no player.
 
 #### Blocos — Tela 1
 
-Bloco simples: o botão **ENTRE** abre a Screen2 (player).
+O botão **ENTRE** abre a Screen2 (player).
 
 ![Blocos Menu](PlayerTauz/Blocks_MenuTauz.png)
 
@@ -81,37 +85,35 @@ Tela principal com controles de reprodução, slider de progresso, botões de pr
 
 #### Blocos — Tela 2
 
-Os blocos controlam toda a lógica do player:
-
-- **Listas globais:** músicas (arquivos `.mp3`), nomes das faixas, imagens das capas e durações armazenados em listas
-- **chamar_musica:** função central que carrega a faixa atual — define o arquivo do tocador, atualiza o label com o nome, troca a imagem da capa e reseta o slider
-- **PlayPause:** verifica se já há uma música carregada; se sim, alterna entre pausar e continuar; caso contrário, chama `chamar_musica` para iniciar
-- **Próximo / Anterior:** incrementa ou decrementa o índice global e chama `chamar_musica`, com verificação de limites da lista
-- **Clock (Timer):** a cada tick atualiza a posição do slider (`ThumbPosition`) com o tempo atual da faixa; quando a música termina, para automaticamente
-- **Slider:** quando o usuário arrasta, reposiciona a música no ponto selecionado
-- **Voltar:** para o tocador e o som ambiente, e retorna para a Screen1
+- **Listas globais:** músicas, nomes das faixas, imagens das capas e durações armazenados em listas
+- **chamar_musica:** carrega a faixa atual, atualiza o label com o nome, troca a capa e reseta o slider
+- **PlayPause:** alterna entre pausar e continuar; se nenhuma música estiver carregada, chama `chamar_musica`
+- **Próximo / Anterior:** incrementa ou decrementa o índice e chama `chamar_musica` com verificação de limites
+- **Clock (Timer):** atualiza o slider com o tempo atual da faixa; para automaticamente ao terminar
+- **Slider:** quando arrastado, reposiciona a música no ponto selecionado
+- **Voltar:** para o tocador e retorna para a Screen1
 
 ![Blocos Player](PlayerTauz/Blocks_PlayerTauz.png)
 
----
-
-### 🛠️ Arquivo do Projeto
+### 📦 Importar o Projeto
 
 ```
-PlayerTauz/Player_Tauz.aia
+Projects → Import project (.aia) → PlayerTauz/Player_Tauz.aia
 ```
 
-> Projeto criado dia 30 de março de 2026
+> Projeto criado em 30 de março de 2026
 
 ---
 
 ## 🎨 02 — Paint
 
+![Banner Paint](assets/banner_paint.png)
+
 App de desenho com canvas livre, paleta de cores e controle de espessura do pincel.
 
 ### Tela
 
-Canvas em branco para desenho livre. Abaixo: slider de espessura e botões de cor (preto, azul, vermelho, amarelo, verde, ciano, magenta, laranja, branco/borracha) e botão de limpar.
+Canvas em branco para desenho livre com slider de espessura, botões de cor e botão de limpar.
 
 ![Tela Paint](Paint/Tela_Paint.png)
 
@@ -119,92 +121,91 @@ Canvas em branco para desenho livre. Abaixo: slider de espessura e botões de co
 
 - **Canvas.Touched:** desenha um ponto nas coordenadas tocadas
 - **Canvas.Dragged:** desenha uma linha contínua do ponto anterior ao atual, criando o efeito de pincel
-- **Slider.PositionChanged:** chama a função `thumbposition` que atualiza a `LineWidth` do canvas em tempo real
-- **Botões de cor:** cada botão chama sua função correspondente (ex: `call verde`, `call azul`) que define o `PaintColor` do canvas
+- **Slider.PositionChanged:** atualiza a `LineWidth` do canvas em tempo real
+- **Botões de cor:** cada botão define o `PaintColor` do canvas com sua cor correspondente
 - **Borracha:** define a cor como branco, simulando apagar
 - **Limpar:** chama `Canvas.Clear` para resetar o desenho
 
 ![Blocos Paint](Paint/Blocks_Paint.png)
 
----
-
-### 🛠️ Arquivo do Projeto
+### 📦 Importar o Projeto
 
 ```
-Paint/Paint.aia
+Projects → Import project (.aia) → Paint/Paint.aia
 ```
 
-> Projeto criado dia 04 de abril de 2026
+> Projeto criado em 04 de abril de 2026
 
 ---
 
 ## ➕ 03 — Quiz Matemática
 
+![Banner Quiz Matemática](assets/banner_quizmat.png)
+
 Quiz de operações matemáticas com geração aleatória de contas e sistema de pontuação.
 
 ### Tela
 
-Interface simples com a operação exibida (ex: `1 + 1 =`), campo de resposta, placar no topo e botão Responder.
+Interface com a operação exibida (ex: `1 + 1 =`), campo de resposta, placar no topo e botão Responder.
 
 ![Tela Quiz](QuizMatematica/Tela_QuizMat.png)
-
 
 ### Blocos
 
 - **Variáveis globais:** `ValorX`, `ValorY`, `Sinal`, `Resultado`, `Pontuação` e `ListaSinais` (`+`, `-`, `x`)
-- **inicializarOperações:** sorteia dois números (1–10), escolhe um sinal aleatório da lista, calcula o resultado correto conforme o sinal e exibe a operação no label. Para subtração, garante que o resultado nunca seja negativo trocando os valores se necessário
-- **Responder.Click:** compara o texto digitado com o resultado; se correto, soma 10 pontos, exibe "Você Acertou!" em verde e mostra o botão Próxima; se errado, subtrai 10 pontos e exibe "Você Errou!" em vermelho
-- **Próxima.Click:** limpa o campo, esconde o feedback e chama `inicializarOperações` para nova rodada
-- **Pular.Click:** subtrai 10 pontos e vai para a próxima operação sem exigir resposta
+- **inicializarOperações:** sorteia dois números (1–10), escolhe um sinal aleatório e calcula o resultado. Para subtração, garante que o resultado nunca seja negativo
+- **Responder.Click:** compara a resposta digitada com o resultado correto; se acertar soma 10 pontos e exibe feedback verde; se errar subtrai 10 pontos e exibe feedback vermelho
+- **Próxima.Click:** limpa o campo e chama `inicializarOperações` para nova rodada
+- **Pular.Click:** subtrai 10 pontos e avança sem exigir resposta
 
 ![Blocos Quiz](QuizMatematica/Blocks_QuizMat.png)
 
----
-
-### 🛠️ Arquivo do Projeto
+### 📦 Importar o Projeto
 
 ```
-QuizMatematica/Quiz_Matematica.aia
+Projects → Import project (.aia) → QuizMatematica/Quiz_Matematica.aia
 ```
 
-> Projeto criado dia 04 de maio de 2026
+> Projeto criado em 04 de maio de 2026
 
 ---
 
 ## 🚀 04 — Movendo Objetos (Foguete com Botões)
 
+![Banner Movendo Objetos](assets/banner_movendobtn.png)
+
 Foguete controlado por botões direcionais na tela. O sprite muda de imagem conforme a direção do movimento.
 
 ### Tela
 
-Fundo espacial com um foguete no centro e quatro botões de seta (esquerda, cima, baixo, direita) na parte inferior.
+Fundo espacial com um foguete no centro e quatro botões de seta na parte inferior.
 
 ![Tela Movendo Objetos](MovendoObjetos/Tela_MovendoObj.png)
 
 ### Blocos
 
-- **alterarsprite (velocidade, direcao):** função reutilizável que define a velocidade e o heading (direção em graus) do sprite Foguete
-- **Botão Esquerda:** muda a imagem para `Foguete_Esquerda.png` e chama `alterarsprite` com direção 180°
-- **Botão Direita:** muda a imagem para `Foguete_Direita.png` e chama `alterarsprite` com direção 0°
-- **Botão Cima:** muda a imagem para `Foguete_Cima.png` e chama `alterarsprite` com direção 90°
-- **Botão Baixo:** muda a imagem para `Foguete_Baixo.png` e chama `alterarsprite` com direção 270°
+- **alterarsprite (velocidade, direcao):** função reutilizável que define a velocidade e o heading do sprite
+- **Botão Esquerda:** muda a imagem e chama `alterarsprite` com direção 180°
+- **Botão Direita:** muda a imagem e chama `alterarsprite` com direção 0°
+- **Botão Cima:** muda a imagem e chama `alterarsprite` com direção 90°
+- **Botão Baixo:** muda a imagem e chama `alterarsprite` com direção 270°
 - **Foguete.Dragged:** permite arrastar o sprite diretamente com o dedo
 
 ![Blocos Movendo Objetos](MovendoObjetos/Blocks_FogueteBtn.png)
 
----
-
-### 🛠️ Arquivo do Projeto
+### 📦 Importar o Projeto
 
 ```
-MovendoObjetos/Movendo_Objetos.aia
+Projects → Import project (.aia) → MovendoObjetos/Movendo_Objetos.aia
 ```
 
-> Projeto criado dia 7 de maio de 2026
+> Projeto criado em 07 de maio de 2026
 
 ---
 
 ## 🦟 05 — Mate o Mosquito
+
+![Banner Mate o Mosquito](assets/banner_mosquito.png)
 
 Jogo de reflexo onde um mosquito se move aleatoriamente pela tela e o jogador deve tocá-lo antes que o tempo acabe.
 
@@ -217,31 +218,30 @@ Canvas com fundo de sala de estar, contador de tempo (10s) e vidas (3) no topo, 
 ### Blocos
 
 - **Variáveis globais:** `vida` (começa com 3), `tempo` (começa com 10), `jogando` (booleano)
-- **MoverMosquito:** torna o sprite visível e posiciona em coordenadas X e Y aleatórias (0–270)
-- **Iniciar.Click:** ativa os dois clocks, reseta o tempo para 10, chama `MoverMosquito` e verifica se o placar é "Fim de Jogo!" para resetar as vidas
-- **Clock1.Timer (countdown):** a cada tick, se `jogando = true` e tempo > 0, decrementa o tempo e atualiza o label. Quando chega a zero: para os clocks, subtrai uma vida. Se ainda há vidas, reinicia o tempo para 10 e continua; se não há vidas, chama `FimdeJogo`
-- **Clock2.Timer:** chama `MoverMosquito` em loop para movimentar o mosquito pela tela
-- **Mosquito.Touched:** quando o jogador toca o mosquito, chama `FimdeJogo` (contabiliza como acerto/vitória da rodada)
-- **FimdeJogo:** para tudo, esconde o mosquito, exibe dialog "Fim de Jogo! — Jogar Novamente"
-- **Notifier.AfterChoosing:** se o jogador escolhe "Jogar Novamente", reseta vidas e estado para uma nova partida
+- **MoverMosquito:** posiciona o sprite em coordenadas X e Y aleatórias (0–270)
+- **Iniciar.Click:** ativa os clocks, reseta o tempo e chama `MoverMosquito`
+- **Clock1.Timer:** decrementa o tempo a cada tick; ao chegar a zero subtrai uma vida. Se não há mais vidas, chama `FimdeJogo`
+- **Clock2.Timer:** chama `MoverMosquito` em loop para movimentar o mosquito continuamente
+- **Mosquito.Touched:** quando tocado, chama `FimdeJogo`
+- **FimdeJogo:** para tudo e exibe dialog com opção de jogar novamente
 
 ![Blocos Mate Mosquito](MateMosquito/Blocks_Moskito.png)
 
----
-
-### 🛠️ Arquivo do Projeto
+### 📦 Importar o Projeto
 
 ```
-MateMosquito/Mate_o_Mosquito.aia
+Projects → Import project (.aia) → MateMosquito/Mate_o_Mosquito.aia
 ```
 
-> Projeto criado dia 11 de maio de 2026
+> Projeto criado em 11 de maio de 2026
 
 ---
 
 ## 🚀 06 — Foguete com Acelerômetro
 
-Foguete controlado pela inclinação física do celular usando o sensor acelerômetro. Projeto em desenvolvimento.
+![Banner Acelerômetro](assets/banner_acelerometro.png)
+
+Foguete controlado pela inclinação física do celular usando o sensor acelerômetro.
 
 ### Tela
 
@@ -251,34 +251,24 @@ Canvas com foguete sprite e labels mostrando os valores X, Y e Z do acelerômetr
 
 ### Blocos
 
-- **alterarsprite (velocidade, direcao):** define velocidade e heading do sprite, igual ao projeto de botões
-- **AccelerometerSensor1.AccelerationChanged:** evento disparado a cada mudança de inclinação. Se `JogoIniciado = true`, atualiza os labels X, Y, Z e move o foguete:
-  - Se `xAccel ≥ 0` → move para direita (`X + 5`)
-  - Se `xAccel < 0` → move para esquerda (`X - 5`)
-  - Se `yAccel ≥ 0` → move para baixo (`Y + 5`)
-  - Se `yAccel < 0` → move para cima (`Y - 5`)
-- **Iniciar.Click:** define `JogoIniciado = true`, ativando o movimento
-- **Parar.Click:** define `JogoIniciado = false`, reseta os labels para 0 e retorna o foguete à posição central
+- **alterarsprite (velocidade, direcao):** define velocidade e heading do sprite
+- **AccelerometerSensor1.AccelerationChanged:** move o foguete conforme a inclinação do celular:
+  - `xAccel ≥ 0` → move para direita
+  - `xAccel < 0` → move para esquerda
+  - `yAccel ≥ 0` → move para baixo
+  - `yAccel < 0` → move para cima
+- **Iniciar.Click:** ativa o movimento
+- **Parar.Click:** para o movimento e retorna o foguete à posição central
 
 ![Blocos Acelerômetro](MovendoObjetos2/Blocks_FogueteAccel.png)
 
----
-
-### 🛠️ Arquivo do Projeto
+### 📦 Importar o Projeto
 
 ```
-MateMosquito/Mate_o_Mosquito.aia
+Projects → Import project (.aia) → MovendoObjetos2/Movendo_Objetos2.aia
 ```
 
-> Projeto criado dia 25 de maio de 2026
-
----
-
-## 🛠️ Tecnologias Utilizadas
-
-- [MIT App Inventor](https://appinventor.mit.edu)
-- Android
-- Programação visual com blocos
+> Projeto criado em 25 de maio de 2026
 
 ---
 
@@ -291,9 +281,22 @@ MateMosquito/Mate_o_Mosquito.aia
 
 ---
 
+## 📚 O que Aprendi
+
+- Lógica de programação visual com blocos no MIT App Inventor
+- Uso de listas globais para armazenar e navegar entre dados
+- Criação de funções reutilizáveis para simplificar os blocos
+- Manipulação de canvas para desenho e jogos
+- Uso de Clock para timers e animações
+- Integração com sensores do celular como o acelerômetro
+- Estruturação e documentação de múltiplos projetos em um repositório
+
+---
+
 ## ✏️ Autor
 
 Desenvolvido por **Kayozkx**
+
 Todos os projetos foram feitos do zero, sem uso de IA — apenas lógica própria e programação em blocos.
 
 ---
