@@ -44,7 +44,6 @@ Este repositório reúne os primeiros projetos que desenvolvi no MIT App Invento
 ## 📂 Estrutura do Repositório
 
 ```
-
 ExperimentosMIT/
 │
 ├── MateMosquito/
@@ -56,7 +55,6 @@ ExperimentosMIT/
 ├── assets/
 ├── LICENSE
 └── README.md
-
 ```
 
 ---
